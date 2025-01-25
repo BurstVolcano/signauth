@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signature Comparison</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Signature Comparison</h1>
+        <form id="uploadForm">
+            <label for="genuineFile">Upload Genuine Signature:</label>
+            <input type="file" id="genuineFile" name="genuineFile" accept="image/*" required>
+
+            <label for="forgedFile">Upload Forged Signature:</label>
+            <input type="file" id="forgedFile" name="forgedFile" accept="image/*" required>
+
+            <button type="submit">Compare Signatures</button>
+        </form>
+        <div id="result" class="hidden">
+            <h2>Result</h2>
+            <p id="resultText"></p>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
